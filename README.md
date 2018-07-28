@@ -1,4 +1,5 @@
-# jupyter-images
+# Docker images for Jupyter kernels
+
 Custom lightweight Jupyter images for your taste!
 
 I use Jupyter images for almost everything now, but one reason is learning languages or experimenting.
