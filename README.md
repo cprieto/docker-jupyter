@@ -6,10 +6,12 @@ I use Jupyter images for almost everything now, but one reason is learning langu
 
 This repo contains the dockerfiles for custom learning base images for certain jupyter kernels:
 
- * Jupyter Python3 ~615MB ([cprieto/jupyter-python3](https://hub.docker.com/r/cprieto/jupyter-python3/)), with Python3 kernel, pandas, matplotlib, Pillow and plotnine
- * Jupyter OCaml ~700MB ([cprieto/jupyter-ocaml](https://hub.docker.com/r/cprieto/jupyter-ocaml/)), with OCaml kernel [https://github.com/akabe/ocaml-jupyter](https://github.com/akabe/ocaml-jupyter) 
- * Jupyter Elixir ~415MB ([cprieto/jupyter-elixir](https://hub.docker.com/r/cprieto/jupyter-elixir/)), with the IElixir kernel [https://github.com/pprzetacznik/IElixir](https://github.com/pprzetacznik/IElixir)
- * Jupyter F#, ~580MB([cprieto/jupyter-fsharp](https://hub.docker.com/r/cprieto/jupyter-fsharp/) with the IFSharp kernel [https://github.com/fsprojects/IfSharp](https://github.com/fsprojects/IfSharp)
+ * Jupyter Python3, ~615MB ([cprieto/jupyter-python3](https://hub.docker.com/r/cprieto/jupyter-python3/)), with Python3 kernel, pandas, matplotlib, Pillow and plotnine
+ * Jupyter OCaml, ~700MB ([cprieto/jupyter-ocaml](https://hub.docker.com/r/cprieto/jupyter-ocaml/)), with OCaml kernel [https://github.com/akabe/ocaml-jupyter](https://github.com/akabe/ocaml-jupyter) 
+ * Jupyter Elixir, ~415MB ([cprieto/jupyter-elixir](https://hub.docker.com/r/cprieto/jupyter-elixir/)), with the IElixir kernel [https://github.com/pprzetacznik/IElixir](https://github.com/pprzetacznik/IElixir)
+ * Jupyter F#, ~580MB ([cprieto/jupyter-fsharp](https://hub.docker.com/r/cprieto/jupyter-fsharp/)) with the IFSharp kernel [https://github.com/fsprojects/IfSharp](https://github.com/fsprojects/IfSharp)
+ * Jupyter Javascript, ~360M ([cprieto/jupyter-javascript](https://hub.docker.com/r/cprieto/jupyter-javascript)) with the IJavascript kernel [https://github.com/n-riesco/ijavascript](https://github.com/n-riesco/ijavascript)
+ * Jupyter TypeScript, ~405MB ([cprieto/jupyter-typescript](https://hub.docker.com/r/cprieto/jupyter-typescript)) with the ITypeScript kernel [https://github.com/nearbydelta/itypescript](https://github.com/nearbydelta/itypescript]
 
 To get any of these images just `docker pull <image name>` and run it with:
 
