@@ -12,6 +12,7 @@ This repo contains the dockerfiles for custom learning base images for certain j
  * Jupyter F#, ~580MB ([cprieto/jupyter-fsharp](https://hub.docker.com/r/cprieto/jupyter-fsharp/)) with the IFSharp kernel [https://github.com/fsprojects/IfSharp](https://github.com/fsprojects/IfSharp)
  * Jupyter Javascript, ~360M ([cprieto/jupyter-javascript](https://hub.docker.com/r/cprieto/jupyter-javascript)) with the IJavascript kernel [https://github.com/n-riesco/ijavascript](https://github.com/n-riesco/ijavascript)
  * Jupyter TypeScript, ~405MB ([cprieto/jupyter-typescript](https://hub.docker.com/r/cprieto/jupyter-typescript)) with the ITypeScript kernel [https://github.com/nearbydelta/itypescript](https://github.com/nearbydelta/itypescript)
+ * Jupyter Kotlin, ~750MB ([cprieto/jupyter-kotlin](https://hub.docker.com/r/cprieto/jupyter-kotlin)) with the Kotlin kernel [https://github.com/ligee/kotlin-jupyter](https://github.com/ligee/kotlin-jupyter)
 
 To get any of these images just `docker pull <image name>` and run it with:
 
