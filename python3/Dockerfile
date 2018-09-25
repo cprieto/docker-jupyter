@@ -4,8 +4,9 @@ LABEL mantainer "me@cprieto.com"
 RUN apk update && apk upgrade \
     && apk --no-cache add python3 python3-dev build-base freetype-dev sudo \
     && apk --no-cache add libxml2 libxml2-dev libxslt libxslt-dev curl \
-    && apk --no-cache add jpeg jpeg-dev zlib zlib-dev libffi libffi-dev  \
+    && apk --no-cache add jpeg jpeg-dev zlib zlib-dev libffi libffi-dev \
     && apk --no-cache add lapack lapack-dev gfortran ca-certificates \
+    && apk --no-cache add py-geos gdal-dev --repository http://dl-3.alpinelinux.org/alpine/edge/testing \
     && update-ca-certificates \
     && pip3 install --upgrade pip \
     && pip3 install --no-cache-dir notebook numpy \
