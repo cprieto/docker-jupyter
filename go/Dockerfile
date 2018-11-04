@@ -4,7 +4,7 @@ LABEL mantainer "Cristian Prieto <me@cprieto.com>"
 ENV GOROOT=/usr/local/go GOPATH=/opt/go LGOPATH=/opt/lgo
 ENV PATH="${GOROOT}/bin:${GOPATH}/bin:${PATH}"
 
-RUN apt update && apt upgrade \
+RUN apt update && apt upgrade -y \
   && apt install -y --no-install-recommends libzmq3-dev build-essential ca-certificates \
   && apt install -y --no-install-recommends wget git build-essential pkg-config curl \
   && apt install -y --no-install-recommends python3 python3-dev python3-pip python3-setuptools \ 
@@ -13,7 +13,7 @@ RUN apt update && apt upgrade \
   && mkdir -p /opt/go /opt/lgo \
   && wget https://dl.google.com/go/go1.9.7.linux-amd64.tar.gz \
   && tar -xvf go1.9.7.linux-amd64.tar.gz \
-  && mv go/ /usr/local \
+  && rm -rf go1.9.7.linux-amd64.tar.gz && mv go/ /usr/local \
   && go get github.com/yunabe/lgo/cmd/lgo \
   && go get -d github.com/yunabe/lgo/cmd/lgo-internal \
   && lgo install \
