@@ -6,7 +6,7 @@ ENV MIX_HOME=/opt/mix PATH=/opt/mix:${PATH}
 RUN apk upgrade && apk upgrade \
   && apk --no-cache add git curl build-base sudo wget curl \
   && apk --no-cache add python2 python2-dev py-pip \
-  && apk --no-cache add zeromq-dev erlang-dev elixir erlang-crypto \
+  && apk --no-cache add zeromq-dev erlang-dev elixir erlang-crypto erlang-xmerl \
   && pip install --upgrade --no-cache-dir notebook ipywidgets \
   && adduser -D jupyter \
   && echo 'jupyter ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \

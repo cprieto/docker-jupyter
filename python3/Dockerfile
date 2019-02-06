@@ -6,12 +6,13 @@ RUN apk update && apk upgrade \
     && apk --no-cache add libxml2 libxml2-dev libxslt libxslt-dev curl \
     && apk --no-cache add jpeg jpeg-dev zlib zlib-dev libffi libffi-dev \
     && apk --no-cache add lapack lapack-dev gfortran ca-certificates \
-    && apk --no-cache add py-geos gdal-dev --repository http://dl-3.alpinelinux.org/alpine/edge/testing \
+    && apk --no-cache add py3-pymysql py-geos gdal-dev --repository http://dl-3.alpinelinux.org/alpine/edge/testing \
+    && apk --no-cache add py3-lxml py3-psycopg2 \
     && update-ca-certificates \
     && pip3 install --upgrade pip \
-    && pip3 install --no-cache-dir notebook numpy \
-    && pip3 install --no-cache-dir matplotlib Pillow ipywidgets \
-    && pip3 install --no-cache-dir pandas scipy plotnine \
+    && pip3 install --disable-pip-version-check --no-cache-dir notebook numpy sqlalchemy petl \
+    && pip3 install --disable-pip-version-check --no-cache-dir matplotlib Pillow ipywidgets \
+    && pip3 install --disable-pip-version-check --no-cache-dir pandas scipy plotnine \
     && jupyter nbextension enable --py --sys-prefix widgetsnbextension \
     && adduser -D jupyter \
     && mkdir -p /home/jupyter/.jupyter/custom && chown jupyter -R /home/jupyter/.jupyter \
