@@ -16,6 +16,7 @@ This repo contains the dockerfiles for custom learning base images for certain j
  * Jupyter Erlang, ~350MB ([cprieto/jupyter-erlang](https://hub.docker.com/r/cprieto/jupyter-erlang)) with Erlang kernel [https://github.com/filmor/ierl](https://github.com/filmor/ierl)
  * Jupyter Go, ~980MB ([cprieto/jupyter-go](https://hub.docker.com/r/cprieto/jupyter-go)) with LGo kernel [https://github.com/yunabe/lgo](https://github.com/yunabe/lgo), the biggest in the group thanks to a bug in the LGO kernel when using MUSL instead of GLib
  * Jupyter Scala, ~400MB ([cprieto/jupyter-scala](https://hub.docker.com/r/cprieto/jupyter-scala)) with the Almond Scala kernel [https://github.com/almond-sh/almond](https://github.com/almond-sh/almond)
+ * Jupyter Ruby, ~380MB ([cprieto/jupyter-ruby](https://hub.docker.com/r/cprieto/jupyter-ruby)) with the [SciRuby/iruby](https://github.com/SciRuby/iruby) kernel
 
 To get any of these images just `docker pull <image name>` and run it with:
 
