@@ -6,7 +6,7 @@ I use Jupyter images for almost everything now, but one reason is learning langu
 
 This repo contains the dockerfiles for custom learning base images for certain jupyter kernels:
 
- * Jupyter Python3, ~615MB ([cprieto/jupyter-python3](https://hub.docker.com/r/cprieto/jupyter-python3/)), with Python3 kernel, pandas, matplotlib, Pillow and plotnine
+ * Jupyter Python3, ~615MB ([cprieto/jupyter-python3](https://hub.docker.com/r/cprieto/jupyter-python3/)), with Python3 kernel, pandas, matplotlib, Pillow, plotnine, numpy, scipy and drivers for postgresql and mysql.
  * Jupyter OCaml, ~700MB ([cprieto/jupyter-ocaml](https://hub.docker.com/r/cprieto/jupyter-ocaml/)), with OCaml kernel [https://github.com/akabe/ocaml-jupyter](https://github.com/akabe/ocaml-jupyter) 
  * Jupyter Elixir, ~415MB ([cprieto/jupyter-elixir](https://hub.docker.com/r/cprieto/jupyter-elixir/)), with the IElixir kernel [https://github.com/pprzetacznik/IElixir](https://github.com/pprzetacznik/IElixir)
  * Jupyter F#, ~580MB ([cprieto/jupyter-fsharp](https://hub.docker.com/r/cprieto/jupyter-fsharp/)) with the IFSharp kernel [https://github.com/fsprojects/IfSharp](https://github.com/fsprojects/IfSharp)
