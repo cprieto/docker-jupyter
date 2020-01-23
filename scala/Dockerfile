@@ -1,18 +1,21 @@
 FROM alpine:edge
 LABEL mantainer "Cristian Prieto <me@cprieto.com>"
 
-ENV PATH="/opt/almond:${PATH}"
+ENV PATH="/opt/almond:${PATH}" SCALA_VERSION=2.13.0 ALMOND_VERSION=0.9.1
 
 RUN apk upgrade && apk upgrade \
-  && apk add --no-cache openjdk8 python3 python3-dev build-base \
-  && apk add --no-cache git ca-certificates sudo bash curl \
-  && update-ca-certificates \
-  && mkdir /opt/almond && cd /opt/almond \
-  && curl -L -o coursier https://git.io/coursier \
-  && chmod a+x coursier \
+  && apk add --no-cache openjdk8 python3 zeromq-dev python3-dev build-base \
+  && apk add --no-cache git sudo bash curl \
   && adduser -D jupyter \
+  && mkdir /opt/almond && cd /opt/almond \
+  && curl -Lo coursier https://git.io/coursier-cli \
+  && chmod a+x coursier && chown jupyter -R /opt/almond \
+  && ./coursier bootstrap \
+  -r jitpack \
+  -i user -I user:sh.almond:scala-kernel-api_$SCALA_VERSION:$ALMOND_VERSION \
+  sh.almond:scala-kernel_$SCALA_VERSION:$ALMOND_VERSION \
+  -o almond \
   && chown jupyter -R /opt/almond \
-  && su - jupyter -c 'cd /opt/almond && ./coursier bootstrap -i user -I user:sh.almond:scala-kernel-api_2.12.7:0.1.10 sh.almond:scala-kernel_2.12.7:0.1.10 -o almond' \
   && pip3 install --upgrade pip \
   && pip3 install --no-cache-dir notebook ipywidgets \
   && jupyter nbextension enable --py --sys-prefix widgetsnbextension \
